@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+selected=$(printf '\n\n\n󰍃' | wofi --cache-file /dev/null --dmenu --width 300 --columns 2 -c ~/.config/wofi/config_power -s ~/.config/wofi/style_power.css) 
+
+case $selected in
+    )
+        swaylock;;
+    )
+        poweroff;;
+    )
+        reboot;;
+    󰍃)
+        type hyprland && hyprctl dispatch exit;;
+esac

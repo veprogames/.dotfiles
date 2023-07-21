@@ -1,0 +1,23 @@
+#window {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+}
+
+#window * {
+    outline: 0;
+}
+
+#input {
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+}
+
+#entry:selected {
+    border-radius: 1rem;
+    background-color: rgba(0, 128, 255, 0.6);
+}
+
+#img {
+    margin-right: 0.5rem;
+}
