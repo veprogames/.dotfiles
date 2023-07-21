@@ -12,6 +12,9 @@ INC_APPEND_HISTORY=1
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+if type nvim > /dev/null; then
+    alias vim='nvim'
+fi
 
 # apply per-machine custom patches without touching the repository
 [ -f .zshrc.custom ] && source .zshrc.custom
