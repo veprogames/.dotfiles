@@ -1,11 +1,9 @@
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
     "keyboard-state": {
         "numlock": true,
@@ -16,19 +14,19 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
+    // wlr/workspaces supports on-click: activate
     "wlr/workspaces": {
         "format": "{name}",
         "on-click": "activate"
+    },
+    "hyprland/window": {
+        "rewrite":  {
+            "(.*) — LibreWolf": " $1",
+            "vim (.*)": " $1",
+            "(.*)[Gg]it[Hh]ub(.*)": "$1$2",
+            "(.*)([Yy]ou[Tt]ube|Invidious)(.*)": "$1󰗃$3",
+            "(.*) - mpv": " $1"
+        }
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",

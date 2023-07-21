@@ -190,14 +190,6 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-    border-bottom: 2px solid #f0932b;
-}
-
-#temperature.critical {
-    border-bottom: 2px solid #eb4d4b;
-}
-
 #tray {
     background-color: #2980b9;
 }
@@ -245,26 +237,8 @@ label:focus {
     min-width: 16px;
 }
 
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
+#window:not(.empty) {
+    border-bottom: 2px solid orange;
+    padding: 0 1rem;
+    font-weight: 700;
 }
