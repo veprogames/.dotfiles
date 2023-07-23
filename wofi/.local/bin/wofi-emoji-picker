@@ -1,0 +1,3 @@
+#!/bin/bash
+
+awk -F '' '{ for(i=1;i<NF;i++) printf $i"\n" }' ${XDG_CONFIG_HOME:-~/.config}/wofi/emojilist.txt | wofi --dmenu -w32 -p 'pick...' -c ${XDG_CONFIG_HOME:-~/.config}/wofi/config_emoji | wl-copy
