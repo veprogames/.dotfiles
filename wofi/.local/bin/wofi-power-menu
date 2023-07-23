@@ -11,5 +11,5 @@ case $selected in
     )
         reboot;;
     󰍃)
-        type hyprland && hyprctl dispatch exit;;
+        type hyprctl && hyprctl dispatch exit;;
 esac
