@@ -5,3 +5,4 @@ vim.o.expandtab = true
 vim.wo.number = true
 vim.o.syntax = "on"
 vim.o.termguicolors = true
+vim.o.clipboard = "unnamedplus"
