@@ -1,0 +1,3 @@
+visualizer_in_stereo = "yes"
+visualizer_type = ellipse
+visualizer_look = "▉▋"
