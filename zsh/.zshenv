@@ -1,8 +1,8 @@
 export PATH=$PATH:$HOME/.local/bin
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 export EDITOR=vim
-export GTK_THEME=Adwaita:dark
 export GRIM_DEFAULT_DIR=$HOME/screenshots
 
 if type nvim > /dev/null; then
