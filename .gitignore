@@ -1,3 +1,4 @@
 mpd/.config/mpd/database
 mpd/.config/mpd/playlists
 nvim/.config/nvim/plugin/packer_compiled.lua
+ncmpcpp/.config/ncmpcpp/error.log
