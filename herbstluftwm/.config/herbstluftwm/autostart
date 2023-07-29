@@ -23,6 +23,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-r spawn rofi -show drun
+hc keybind $Mod-Shift-s spawn maim -s | xclip -selection clipboard -t image/png
 hc keybind Control-Alt-l spawn xscreensaver-command -lock
 
 # basic movement in tiling and floating mode
@@ -187,10 +188,10 @@ hc unlock
 # hc detect_monitors
 hc detect_monitors
 
-hc spawn dunst
-hc spawn polybar
-hc spawn picom --no-vsync --no-fading-openclose -b
-hc spawn xscreensaver --no-splash
-hc spawn udiskie --smart-tray
+pgrep dunst || hc spawn dunst
+pgrep polybar || hc spawn polybar
+pgrep picom || hc spawn picom --no-vsync --no-fading-openclose -b -o 0.0
+pgrep xscreensaver || hc spawn xscreensaver --no-splash
+pgrep udiskie || hc spawn udiskie --smart-tray
 hc spawn wal -qR
 [[ -x $HOME/.fehbg ]] && $HOME/.fehbg &
