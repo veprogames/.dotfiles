@@ -28,6 +28,7 @@ if type yt-dlp > /dev/null; then
     alias yta='yt-dlp --sponsorblock-remove sponsor --format-sort aext --prefer-free-formats --extract-audio --audio-quality 0 -o "'"$dldir"'/yt-dlp/%(uploader)s/%(title)s.%(ext)s" $1'
 fi
 alias icat='kitty +kitten icat'
+alias hc='herbstclient'
 
 # XDG User Dirs, e. g. used by mpd
 [[ -f .config/user-dirs.dirs ]] && source .config/user-dirs.dirs
