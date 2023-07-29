@@ -23,6 +23,8 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-r spawn rofi -show drun
+hc keybind $Mod-w spawn xdg-open https://
+hc keybind $Mod-e spawn xdg-open ~
 hc keybind $Mod-Shift-s spawn maim -s | xclip -selection clipboard -t image/png
 hc keybind Control-Alt-l spawn xscreensaver-command -lock
 
@@ -178,6 +180,8 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule fixedsize floating=on
 
 hc set tree_style '╾│ ├└╼─┐'
+
+hc set_layout grid
 
 # unlock, just to be sure
 hc unlock
