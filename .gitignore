@@ -1,4 +1,13 @@
-mpd/.config/mpd/database
-mpd/.config/mpd/playlists
+mpd/.config/mpd/*
+!mpd/.config/mpd/mpd.conf
+
 nvim/.config/nvim/plugin/packer_compiled.lua
-ncmpcpp/.config/ncmpcpp/error.log
+
+ncmpcpp/.config/ncmpcpp/*
+!ncmpcpp/.config/ncmpcpp/config
+
+btop/.config/btop/*
+!btop/.config/btop/btop.conf
+
+newsboat/.config/newsboat/*
+!newsboat/.config/newsboat/config
