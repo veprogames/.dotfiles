@@ -1,3 +1,3 @@
 reload-threads 8
-browser "librewolf %u"
+browser "xdg-open %u"
 feedlist-format "%n %S %3U %t"
