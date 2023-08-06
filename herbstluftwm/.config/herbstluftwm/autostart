@@ -25,7 +25,7 @@ hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xter
 hc keybind $Mod-r spawn rofi -show drun
 hc keybind $Mod-w spawn xdg-open https://
 hc keybind $Mod-e spawn xdg-open ~
-hc keybind $Mod-Shift-s spawn maim -s | xclip -selection clipboard -t image/png
+hc keybind $Mod-Shift-s spawn bash -c 'maim -s | xclip -selection clipboard -t image/png'
 hc keybind Control-Alt-l spawn xscreensaver-command -lock
 
 # basic movement in tiling and floating mode
