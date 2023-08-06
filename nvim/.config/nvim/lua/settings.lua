@@ -11,4 +11,3 @@ o.number = true
 o.syntax = "on"
 o.termguicolors = true
 o.clipboard = "unnamedplus"
-o.termguicolors = true

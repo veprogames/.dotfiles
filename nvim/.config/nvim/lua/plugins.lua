@@ -21,15 +21,16 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
-    require("nvim-tree").setup()
 
     use 'williamboman/mason.nvim'
-    require("mason").setup()
 
     use 'tanvirtin/monokai.nvim'
-    vim.cmd("colorscheme monokai")
 
     if packer_bootstrap then
         require('packer').sync()
     end
+
+    require("nvim-tree").setup()
+    require("mason").setup()
+    vim.cmd("colorscheme monokai")
 end)
