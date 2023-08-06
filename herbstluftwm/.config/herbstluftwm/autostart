@@ -192,8 +192,13 @@ hc unlock
 # hc detect_monitors
 hc detect_monitors
 
+polybar-msg cmd quit
+for mon in $(polybar -m | cut -d: -f1); do
+    echo $mon
+    hc spawn bash -c "POLYBAR_MONITOR=$mon polybar"
+done
+
 pgrep dunst || hc spawn dunst
-pgrep polybar || hc spawn polybar
 pgrep picom || hc spawn picom --no-vsync --no-fading-openclose -b -o 0.0
 pgrep xscreensaver || hc spawn xscreensaver --no-splash
 pgrep udiskie || hc spawn udiskie --smart-tray
