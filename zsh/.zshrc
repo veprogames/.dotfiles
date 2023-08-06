@@ -29,9 +29,14 @@ if type yt-dlp > /dev/null; then
 fi
 alias icat='kitty +kitten icat'
 alias hc='herbstclient'
+if type micromamba > /dev/null; then
+    alias mamba='micromamba'
+fi
 
 # XDG User Dirs, e. g. used by mpd
 [[ -f .config/user-dirs.dirs ]] && source .config/user-dirs.dirs
 
 # apply per-machine custom patches without touching the repository
 [ -f .zshrc.custom ] && source .zshrc.custom
+
+
