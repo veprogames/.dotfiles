@@ -14,10 +14,8 @@
             "unlocked": ""
         }
     },
-    // wlr/workspaces supports on-click: activate
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "format": "{name}",
-        "on-click": "activate"
     },
     "hyprland/window": {
         "rewrite":  {
